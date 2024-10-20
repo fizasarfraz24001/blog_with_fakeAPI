@@ -1,8 +1,9 @@
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import React from 'react'
 
-export default function PostCards(props:any) {
+export default function PostCard(props:Params) {
   const {PostData} = props 
-  
+  console.log("PostData" )
     return (
         <div>
             <div className="flex justify-center">
@@ -15,9 +16,9 @@ export default function PostCards(props:any) {
                     />
                     {/* Post Content */}
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Post Ttitle</div>
+                        <div className="font-bold text-xl mb-2">{PostData.title}</div>
                         <p className="text-gray-700 text-base">
-                           nsnjhdskjahsdkjhbbdskjasbdjdabdjabsms,knsdn
+                           {PostData.body}
                         </p>
                     </div>
 
